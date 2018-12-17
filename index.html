@@ -1,23 +1,73 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <script type="text/javascript" src="js/jq.js"></script>
-    <script type="text/javascript" src="js/scripts.js"></script>
-    <meta charset="utf-8">
-    <title>Pig Dice Project</title>
-  </head>
-  <body>
-
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <p>Week 4 IP - Pig Dice</p>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="text/javascript" src="js/jq.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pig Dice</title>
+</head>
+<body>
+  <div class="container">
+    <nav class="nabbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="https://www.moringaschool.com/"class="navbar-brand">Moringa</a>
         </div>
-
+        <div>
+          <ul class="nav navbar-nav">
+            <li><a href="#">Portofolio</a></li>
+            <li><a href="#">Triangle</a></li>
+            <li><a href="#">Quiz Board</a></li>
+            <li class="Active"><a href="#">Pig Dice</a></li>
+          </ul>
+        </div>
       </div>
+    </nav>
+  </div>
+  <div class="container">
+    <div class="col-md-6 col-sx-12" id="players">
+      <h1>Players Navigation</h1>
 
+      <!-- //Player 1 -->
+      <div class="player-1-nav">
+        <label>Player 1 Name:</label>
+        <label id="player-one-name"></label><br>
+        Enter Player 1 Name: <input type="text" id="player-1-name"></input>
+        <br><br><br>
+        <label for="" id="lbScore1Label">Score 0</label>
+        <label for="" id="lbScore1Value">Total 0</label>
+        <br><hr>
+      </div>
+      <!-- //Player 2 -->
+      <div class="player-2-nav">
+        <label>Player 2 Name:</label>
+        <label id="player-one-name"></label><br>
+        Enter Player 1 Name: <input type="text" id="player-1-name"></input>
+        <br><br><br>
+        <label for="" id="lbScore2Label">Score 0</label>
+        <label for="" id="lbScore2Value">Total 0</label>
+        <br><hr>
+      </div>
+      <!-- //End Player 2 -->
     </div>
-  </body>
+    <div class="col-md-3 colo-sx-6" id="results">
+      <h4>Result Navigation</h4>
+      <button id="new-game">New Game</button>
+      <button id="hold">Hold</button>
+      <div></div>
+      <div id="placeholder"></div>
+      <button id="dice-display">Roll Dice</button>
+    </div>
+    <div class="col-md-3 col-sx-6" id="dice-info">
+      <h4>Pig Dice Information Navigation</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </div>
+
+
+</body>
 </html>

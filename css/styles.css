@@ -1,0 +1,42 @@
+.page-header {
+  text-align: center;
+  color: #3cb76d;
+  background-color: #823cb7;
+  font-size: 20px;
+}
+
+#lbScore{
+  text-align: center;
+}
+#players {
+  background-color: blue;
+  border-left: 1px solid #dddddd;
+  padding:
+}
+#results{
+  background-color: red;
+}
+#dice-info{
+  background-color: green;
+  border-right: 3px solid #dddddd;
+}
+
+#dice-display, #new-game, #hold {
+  background-color: #3174e0;
+  border-radius: 6px;
+  padding: 10px;
+  border: none;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  width: 100px;
+  cursor: pointer;
+}
+#placeholder {
+  height: 100px;
+  width: 100px;
+  padding: 50px;
+  margin: 50px 80px;
+  /* border: 1px solid gray;
+  border-radius: 10px; */
+  font-size:80px;
+}
