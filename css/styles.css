@@ -5,6 +5,9 @@
   font-size: 20px;
 }
 
+label {
+  font-size: 20px;
+}
 #lbScore{
   text-align: center;
 }
@@ -14,8 +17,9 @@
   padding:
 }
 #results{
-  background-color: red;
+  background-color: #4286f4;
 }
+
 #dice-info{
   background-color: green;
   border-right: 3px solid #dddddd;
