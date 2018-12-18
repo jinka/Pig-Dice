@@ -77,14 +77,12 @@ $(document).ready(function(){
     activePlayer.hold();
     // $("#lbScore1Value").text(activePlayer.totalScore);
 
-    alert(player1)
     if (activePlayer == player1) {
-      $("#results").css("background-color","#4286f4")
       $("#lbScore1Label").text(activePlayer.runningScore);
       $("#act-player-name").text($("#player-one-name").text())
+      $("#results").css("background-color","#4286f4")
     } else {
       $("#results").css("background-color","#e541f4")
-
       $("#lbScore2Label").text(activePlayer.runningScore);
       $("#act-player-name").text($("#player-two-name").text())
 
