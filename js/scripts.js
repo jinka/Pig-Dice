@@ -72,29 +72,22 @@ $(document).ready(function(){
     activePlayer=player1
   })
 
-  $("#hold").click(function(){
-
-    activePlayer.hold();
-    // $("#lbScore1Value").text(activePlayer.totalScore);
-
-    if (activePlayer == player1) {
-      $("#lbScore1Label").text(activePlayer.runningScore);
-      $("#act-player-name").text($("#player-one-name").text())
-      $("#results").css("background-color","#4286f4")
-    } else {
-      $("#results").css("background-color","#e541f4")
-      $("#lbScore2Label").text(activePlayer.runningScore);
-      $("#act-player-name").text($("#player-two-name").text())
-
-    }
-  })
 
   function displayDiceNumber(number) {;
     var placeholder = document.getElementById('placeholder');
     placeholder.innerHTML = number;
   }
 
-  var displayObject = document.getElementById('dice-display');
+  $("#hold").click(function(){
+
+    activePlayer.hold();
+
+    if (activePlayer == player1) {
+      $("#results").css("background-color","#4286f4")
+    } else {
+      $("#results").css("background-color","#e541f4")
+    }
+  })
 
   $("#dice-display").click(function(){
     diceCurrentSide = new PigDice(6);
@@ -109,7 +102,6 @@ $(document).ready(function(){
       $("#act-player-name").text($("#player-one-name").text())
     } else {
       $("#results").css("background-color","#e541f4")
-
       $("#lbScore1Label").text(0);
       $("#lbScore2Label").text(activePlayer.runningScore);
       $("#act-player-name").text($("#player-two-name").text())
