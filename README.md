@@ -11,6 +11,8 @@ Pig Dice two human players will take a roll at a time, there is also a machine p
 # Getting started
 
  Players must register their names to play the game. To register a player there are two input text boxes. After entering the name player one can start new game. Player can continue rolling after getting One or hold. If he/she get 1 his score will be zero and player 2 take the roll.  If player 1 hold or miss same player 2 can play and will proceed as player 1.
+ To start using, first create 2 players giving names then click New Game Button. Then use Roll Dice button.
+
 
 # Author Information
 
@@ -23,6 +25,7 @@ Follow these to setup Pig Dice Application:
 2. Then go inside project folder => cd w3ip
 3. Open Index.html in a browser like Google chrome.
 
+
 # BDD
 
 Pig Dice App is a game application:
@@ -30,7 +33,7 @@ a. Gather all possibilities that dice output.
 b. Check if current side is 1 to switch the player.
 c. Cancel current score if the player get zero.
 d. Save current score if current player hold.
- 
+
 
 # Technologies Used
 

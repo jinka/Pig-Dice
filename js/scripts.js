@@ -77,6 +77,7 @@ $(document).ready(function(){
     activePlayer.hold();
     // $("#lbScore1Value").text(activePlayer.totalScore);
 
+    alert(player1)
     if (activePlayer == player1) {
       $("#results").css("background-color","#4286f4")
       $("#lbScore1Label").text(activePlayer.runningScore);
@@ -96,6 +97,7 @@ $(document).ready(function(){
   }
 
   var displayObject = document.getElementById('dice-display');
+
   $("#dice-display").click(function(){
     diceCurrentSide = new PigDice(6);
     displayDiceNumber(diceCurrentSide.roll());
