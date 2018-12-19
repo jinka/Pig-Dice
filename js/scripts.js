@@ -82,11 +82,11 @@ $(document).ready(function(){
 
   $("#hold-p1").click(function(){
     humanPlayer1.hold();
-    $("#lbScore1Label").text(humanPlayer1.totalScore);
+    $("#lbScore1Value").text(humanPlayer1.totalScore);
   })
   $("#hold-p2").click(function(){
     humanPlayer2.hold();
-    $("#lbScore2Label").text(humanPlayer2.totalScore);
+    $("#lbScore2Value").text(humanPlayer2.totalScore);
   })
 
   $("#dice-display-p1").click(function(){
