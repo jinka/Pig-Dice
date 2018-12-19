@@ -34,7 +34,7 @@ function Player(active){
 Player.prototype.hold = function() {
   this.totalScore += this.runningScore;
   this.runningScore = 0;
-  alert(this.playerName + ", your turn is over, pass the mouse!");
+  alert(this.playerName + ", you hold your turn, we save your scores.");
 }
 Player.prototype.rollone = function() {
   if (this.roll == 1) {
@@ -74,22 +74,28 @@ $(document).ready(function(){
     var placeholderP1 = document.getElementById('placeholder-1');
     placeholderP1.innerHTML = number;
   }
+  var placeholderP1 = document.getElementById('placeholder-1');
+  var placeholderP2 = document.getElementById('placeholder-2');
 
   function displayDiceNumberP2(number) {
-    var placeholderP2 = document.getElementById('placeholder-2');
     placeholderP2.innerHTML = number;
   }
 
   $("#hold-p1").click(function(){
     humanPlayer1.hold();
     $("#lbScore1Value").text(humanPlayer1.totalScore);
+    $("#lbScore1Label").text(0)
+    placeholderP1.innerHTML = 0
   })
   $("#hold-p2").click(function(){
     humanPlayer2.hold();
     $("#lbScore2Value").text(humanPlayer2.totalScore);
+  $("#lbScore2Label").text(0)
+  placeholderP2.innerHTML=0
   })
 
   $("#dice-display-p1").click(function(){
+    $("#lbScore1Label").text(0)
     diceCurrentSide = new PigDice(6);
     displayDiceNumberP1(diceCurrentSide.roll());
     humanPlayer1.roll = diceCurrentSide.roll();
