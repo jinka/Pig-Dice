@@ -34,7 +34,7 @@ function Player(active){
 Player.prototype.hold = function() {
   this.totalScore += this.runningScore;
   this.runningScore = 0;
-   alert(this.playerName + ", your turn is over, pass the mouse!");
+  alert(this.playerName + ", your turn is over, pass the mouse!");
 }
 Player.prototype.rollone = function() {
   if (this.roll == 1) {
@@ -94,8 +94,8 @@ $(document).ready(function(){
     displayDiceNumberP1(diceCurrentSide.roll());
     humanPlayer1.roll = diceCurrentSide.roll();
     humanPlayer1.rollone();
-      $("#lbScore1Label").text(humanPlayer1.runningScore);
-      $("#act-player-name").text($("#player-one-name").text())
+    $("#lbScore1Label").text(humanPlayer1.runningScore);
+    $("#act-player-name").text($("#player-one-name").text())
   })
 
   $("#dice-display-p2").click(function(){
@@ -104,8 +104,8 @@ $(document).ready(function(){
     humanPlayer2.roll = diceCurrentSide.roll();
     humanPlayer2.rollone();
     // $("#results").css("background-color","#4286f4")
-      $("#lbScore2Label").text(humanPlayer2.runningScore);
-      $("#act-player-name").text($("#player-two-name").text())
+    $("#lbScore2Label").text(humanPlayer2.runningScore);
+    $("#act-player-name").text($("#player-two-name").text())
   })
 
 })
