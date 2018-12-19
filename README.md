@@ -28,11 +28,13 @@ Follow these to setup Pig Dice Application:
 
 # BDD
 
-Pig Dice App is a game application:
-a. Gather all possibilities that dice output.
-b. Check if current side is 1 to switch the player.
-c. Cancel current score if the player get zero.
-d. Save current score if current player hold.
+Pig Dice App is a game application that allows two players to play Pig Dice game.
+Specification of the Pig Dice:
+Behavior:
+1. Two players register their names.
+2.  Player one click CLICK ME TO START NEW GAME Button to start the game.
+3. Player one clicks the Roll button and gets number between 1-6. If he gets other than 1 is added his score.
+4. Player 2 also does like player one.
 
 
 # Technologies Used
