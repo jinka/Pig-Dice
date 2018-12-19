@@ -64,6 +64,12 @@ p {
   width: 100px;
   cursor: pointer;
 }
+footer{
+  background-color: black;
+  height: 50px;
+  color: white;
+}
+
 #placeholder {
   height: 100px;
   width: 100px;
