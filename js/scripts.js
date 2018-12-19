@@ -40,12 +40,6 @@ Player.prototype.rollone = function() {
   if (this.roll == 1) {
     this.runningScore = 0;
     alert(this.playerName + " Your current output is 1, timeout.")
-    if (activePlayer == player1) {
-      activePlayer = player2
-    } else {
-      activePlayer = player1
-    }
-
   } else {
     this.runningScore += this.roll;
   }
@@ -69,13 +63,12 @@ $(document).ready(function(){
     humanPlayer2.playerName=playerTwoName;
     activePlayer=humanPlayer1
   })
-
-  function displayDiceNumberP1(number) {
-    var placeholderP1 = document.getElementById('placeholder-1');
-    placeholderP1.innerHTML = number;
-  }
   var placeholderP1 = document.getElementById('placeholder-1');
   var placeholderP2 = document.getElementById('placeholder-2');
+
+  function displayDiceNumberP1(number) {
+    placeholderP1.innerHTML = number;
+  }
 
   function displayDiceNumberP2(number) {
     placeholderP2.innerHTML = number;
@@ -87,11 +80,12 @@ $(document).ready(function(){
     $("#lbScore1Label").text(0)
     placeholderP1.innerHTML = 0
   })
+
   $("#hold-p2").click(function(){
     humanPlayer2.hold();
     $("#lbScore2Value").text(humanPlayer2.totalScore);
-  $("#lbScore2Label").text(0)
-  placeholderP2.innerHTML=0
+    $("#lbScore2Label").text(0)
+    placeholderP2.innerHTML=0
   })
 
   $("#dice-display-p1").click(function(){
@@ -100,18 +94,24 @@ $(document).ready(function(){
     displayDiceNumberP1(diceCurrentSide.roll());
     humanPlayer1.roll = diceCurrentSide.roll();
     humanPlayer1.rollone();
+    if (humanPlayer1.runningScore==0){
+      displayDiceNumberP1(0)
+    }
     $("#lbScore1Label").text(humanPlayer1.runningScore);
     $("#act-player-name").text($("#player-one-name").text())
   })
 
   $("#dice-display-p2").click(function(){
+    $("#lbScore2Label").text(0)
     diceCurrentSide = new PigDice(6);
     displayDiceNumberP2(diceCurrentSide.roll());
     humanPlayer2.roll = diceCurrentSide.roll();
-    humanPlayer2.rollone();
-    // $("#results").css("background-color","#4286f4")
+    humanPlayer2.rollone()
+    if (humanPlayer2.runningScore==0){
+      displayDiceNumberP2(0)
+    }
+
     $("#lbScore2Label").text(humanPlayer2.runningScore);
     $("#act-player-name").text($("#player-two-name").text())
   })
-
 })
