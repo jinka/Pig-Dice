@@ -1,3 +1,7 @@
+.bg-black {
+  background-color: black;
+}
+
 .page-header {
   text-align: center;
   color: #3cb76d;
@@ -5,8 +9,11 @@
   font-size: 20px;
 }
 
-label {
+p {
   font-size: 20px;
+}
+#lbScore2Label,#lbScore2Value,#lbScore1Label,#lbScore1Value {
+  font-size: 30px;
 }
 #lbScore{
   text-align: center;
@@ -16,17 +23,38 @@ label {
   border-left: 1px solid #dddddd;
   padding:
 }
+#placeholder-1,#placeholder-2 {
+  font-size: 60px;
+  margin-left: 90px;
+}
 #results{
   background-color: #4286f4;
-  height: 449px;
+  height: 383px;
 }
+#player-1-panel{
+  background-color: #4286f4;
+  height: 383px;
+}
+#player-2-panel{
+  background-color: #4286f4;
+  height: 383px;
 
+}
 #dice-info{
   background-color: green;
   border-right: 3px solid #dddddd;
 }
-
-#dice-display, #new-game, #hold {
+#new-game{
+  background-color: #42f492;
+  border-radius: 6px;
+  padding: 10px;
+  border: none;
+  color: rgb(79, 78, 76);
+  text-transform: uppercase;
+  width: 250px;
+  cursor: pointer;
+}
+#dice-display-p1, #hold-p1,#dice-display-p2, #hold-p2 {
   background-color: #3174e0;
   border-radius: 6px;
   padding: 10px;

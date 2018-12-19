@@ -34,6 +34,7 @@ function Player(active){
 Player.prototype.hold = function() {
   this.totalScore += this.runningScore;
   this.runningScore = 0;
+   alert(this.playerName + ", your turn is over, pass the mouse!");
 }
 Player.prototype.rollone = function() {
   if (this.roll == 1) {
@@ -54,58 +55,57 @@ Player.prototype.rollone = function() {
 $(document).ready(function(){
 
   $("#new-game").click(function(){
-    $("#results").css("background-color","#4286f4")
+    // $("#results").css("background-color","#4286f4")
     $("#player-two-name").text($("#player-2-name").val());
     $("#player-one-name").text($("#player-1-name").val());
-
     $("#act-player-name").text($("#player-one-name").text())
-
-    player1 = new Player(true);
-    player2 = new Player(false)
-
+    $("#player1Name").text($("#player-one-name").text())
+    $("#player2Name").text($("#player-two-name").text())
+    humanPlayer1 = new Player(true);
+    humanPlayer2 = new Player(false)
     playerOneName = $("#player-one-name").text()
     playerTwoName = $("#player-two-name").text()
-
-    player1.playerName=playerOneName;
-    player2.playerName=playerTwoName;
-
-    activePlayer=player1
+    humanPlayer1.playerName=playerOneName;
+    humanPlayer2.playerName=playerTwoName;
+    activePlayer=humanPlayer1
   })
 
-
-  function displayDiceNumber(number) {;
-    var placeholder = document.getElementById('placeholder');
-    placeholder.innerHTML = number;
+  function displayDiceNumberP1(number) {
+    var placeholderP1 = document.getElementById('placeholder-1');
+    placeholderP1.innerHTML = number;
   }
 
-  $("#hold").click(function(){
+  function displayDiceNumberP2(number) {
+    var placeholderP2 = document.getElementById('placeholder-2');
+    placeholderP2.innerHTML = number;
+  }
 
-    activePlayer.hold();
-
-    if (activePlayer == player1) {
-      $("#results").css("background-color","#4286f4")
-    } else {
-      $("#results").css("background-color","#e541f4")
-    }
+  $("#hold-p1").click(function(){
+    humanPlayer1.hold();
+    $("#lbScore1Label").text(humanPlayer1.totalScore);
+  })
+  $("#hold-p2").click(function(){
+    humanPlayer2.hold();
+    $("#lbScore2Label").text(humanPlayer2.totalScore);
   })
 
-  $("#dice-display").click(function(){
+  $("#dice-display-p1").click(function(){
     diceCurrentSide = new PigDice(6);
-    displayDiceNumber(diceCurrentSide.roll());
-    activePlayer.roll = diceCurrentSide.roll();
-    activePlayer.rollone();
-
-    if (activePlayer == player1) {
-      $("#results").css("background-color","#4286f4")
-      $("#lbScore2Label").text(0)
-      $("#lbScore1Label").text(activePlayer.runningScore);
+    displayDiceNumberP1(diceCurrentSide.roll());
+    humanPlayer1.roll = diceCurrentSide.roll();
+    humanPlayer1.rollone();
+      $("#lbScore1Label").text(humanPlayer1.runningScore);
       $("#act-player-name").text($("#player-one-name").text())
-    } else {
-      $("#results").css("background-color","#e541f4")
-      $("#lbScore1Label").text(0);
-      $("#lbScore2Label").text(activePlayer.runningScore);
+  })
+
+  $("#dice-display-p2").click(function(){
+    diceCurrentSide = new PigDice(6);
+    displayDiceNumberP2(diceCurrentSide.roll());
+    humanPlayer2.roll = diceCurrentSide.roll();
+    humanPlayer2.rollone();
+    // $("#results").css("background-color","#4286f4")
+      $("#lbScore2Label").text(humanPlayer2.runningScore);
       $("#act-player-name").text($("#player-two-name").text())
-    }
   })
 
 })
