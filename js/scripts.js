@@ -94,7 +94,7 @@ $(document).ready(function(){
     displayDiceNumberP1(diceCurrentSide.roll());
     humanPlayer1.roll = diceCurrentSide.roll();
     humanPlayer1.rollone();
-    if (humanPlayer1.runningScore==0){
+    if (humanPlayer1.runningScore ==0){
       displayDiceNumberP1(0)
     }
     $("#lbScore1Label").text(humanPlayer1.runningScore);

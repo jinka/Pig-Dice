@@ -35,6 +35,13 @@ Behavior:
 2.  Player one click CLICK ME TO START NEW GAME Button to start the game.
 3. Player one clicks the Roll button and gets number between 1-6. If he gets other than 1 is added his score.
 4. Player 2 also does like player one.
+Output:
+1. Players start the game.
+2. Player dice a roll and gets a number.
+3. Then gets total like round = 4 total is 4.
+4. Playr dice roll again and gets total if he get 3 total = 7
+5. Plyer rolls and gets 1 then get total zero.
+6. Or Player holds and save total.
 
 
 # Technologies Used
