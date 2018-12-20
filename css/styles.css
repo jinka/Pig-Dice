@@ -1,7 +1,9 @@
 .bg-black {
   background-color: black;
 }
-
+#player1Name,#player2Name{
+  color: red;
+}
 .page-header {
   text-align: center;
   color: #3cb76d;

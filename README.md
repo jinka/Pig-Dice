@@ -5,44 +5,33 @@
 A Pig Dice simple game intended for to play every age. As moringa school student this is my fourth independent project. Pig Dice is a web application app which shows our ability to build apps..  
 
 # Project Description
-
-Pig Dice two human players will take a roll at a time, there is also a machine player and a human player that can play easy and hard game.
-
-# Getting started
-
-Players must register their names to play the game. To register a player there are two input text boxes. After entering the player and player press New Game button to start. Player can continue rolling after getting One or hold. If he/she get 1 his score will be zero and player 2 take the roll.  If player 1 hold or miss same player 2 can play and will proceed as player 1.
-To start using, first create 2 players giving names then click New Game Button. Then use Roll Dice button.
-
-
-# Author Information
-
-My name is Dayud Mohamed Farah, I am one the Moringa prep class 14.
+Two players will take a roll at a time, each can dice as many as he/she want until rolls 1 so player all points, or hold the game to save points.
 
 # Setup Instruction
-
 Follow these to setup Pig Dice Application:
 1. Git clone the project using git clone https://github.com/jinka/Pig-Dice.git
 2. Then go inside project folder => cd w3ip
 3. Open Index.html in a browser like Google chrome.
 
 
-# BDD
+# Getting started
 
-Pig Dice App is a game application that allows two players to play Pig Dice game.
-Specification of the Pig Dice:
-Behavior:
-1. Two players register their names.
-2.  Player one click CLICK ME TO START NEW GAME Button to start the game.
-3. Player one clicks the Roll button and gets number between 1-6. If he gets other than 1 is added his score.
-4. Player 2 also does like player one.
-Output:
-1. Players start the game.
-2. Player dice a roll and gets a number.
-3. Then gets total like round = 4 total is 4.
-4. Playr dice roll again and gets total if he get 3 total = 7
-5. Plyer rolls and gets 1 then get total zero.
-6. Or Player holds and save total.
+Players must register their names(Not required, if leaved application gives default names (Player 1 and Player 2) to play the game. To register a player there are two input text boxes. After entring their names the can start y pressing New Game button.
 
+
+# App Behavior/Input/Output
+1. Players put thier name/Input names/Start the Game.
+2. Player1 start rolling/Click roll button/Dice rolls and generates number between 1-6
+3. Player 1 rolls number other than 1 then added his/her points/Roll like 4/Score total 4
+4. Player rolls 1/Rolls 1/Alert "Player1, Your current output is 1, timeout."/
+5. Player 2 proceeds just Player 1.
+6. Player score reach 100 or greater and player holds/Scores 100 or greater/Popup message "Player name + Congratulations, you are the Winner"
+
+# Bugs
+Currently no know bug, if you met any bugs or have contribution please contact me voiphandy@gmail.com.
+
+# Author Information
+My name is Dayud Mohamed Farah, I am one the Moringa prep class 14.
 
 # Technologies Used
 
