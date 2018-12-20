@@ -30,7 +30,7 @@ Player.prototype.rollOne = function() {
   }
 }
 Player.prototype.winnerCheck = function () {
-  if (this.totalscore >= 99) {
+  if (this.totalScore >= 100) {
     alert(this.playerName + " Congratulations, you are the Winner ");
   }
 }
